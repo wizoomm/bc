@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас — Beauty Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+  <!-- Хэдер -->
+<header>
+  <a class="logo" href="index.html">BC</a>
+
+  <!-- Кнопка-бургер для мобильных -->
+  <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="siteNav">
+    <img src="img/burger.svg" alt="" width="28" height="28">
+  </button>
+
+  <nav id="siteNav">
+    <a href="about.html">О НАС</a>
+    <a href="services.html">УСЛУГИ</a>
+    <a href="recording.html">ЗАПИСЬ</a>
+    <a href="shares.html">АКЦИИ</a>
+    <a href="recommendations.html">РЕКОМЕНДАЦИИ</a>
+    <a href="questions.html">ВОПРОСЫ</a>
+  </nav>
+</header>
+
+  <!-- Хлебные крошки -->
+  <div class="breadcrumbs">
+    <a href="index.html">Главная</a> / <span>О нас</span>
+  </div>
+
+  <!-- О нас контент -->
+  <section class="about-content">
+    <!-- Адрес и описание студии -->
+    <div class="studio-info">
+      <p>Наша студия находится в Приморском районе по адресу:</p>
+      <p><strong>Приморский проспект д137 к1</strong></p>
+      <p>В студии красоты "Клуб красоты" царит атмосфера волшебства, где каждая процедура — это искусство.<br>Под руководством талантливого мастера Анастасии ваши желания становятся шедеврами, отражающие вашу уникальность, внутреннюю гармонию, красоту.</p>
+    </div>
+
+    <!-- Профиль основателя -->
+    <div class="founder-profile">
+      <img src="img/specialist3.jpg" alt="Куртеева Анастасия" class="founder-photo">
+      <div class="founder-info">
+        <h3 class="founder-name">КУРТЕЕВА АНАСТАСИЯ</h3>
+        <p class="founder-role">Основатель студии и мастер маникюра/педикюра</p>
+        <p class="founder-exp">Стаж в студии 4 года</p>
+      </div>
+    </div>
+
+    <!-- Почему мы -->
+    <div class="why-us">
+      <h2 class="why-us-title">ПОЧЕМУ МЫ?</h2>
+      
+      <div class="features-list">
+        <div class="feature-block">
+          <div class="feature-icon"></div>
+          <div class="feature-content">
+            <h4 class="feature-title">Квалифицированный персонал</h4>
+            <p class="feature-desc">10+ лет средний стаж специалистов, которые не только ведут прием но и проводят обучения</p>
+          </div>
+        </div>
+
+        <div class="feature-block">
+          <div class="feature-icon"></div>
+          <div class="feature-content">
+            <h4 class="feature-title">Сервис и качество</h4>
+            <p class="feature-desc">Натуральный кофе, конфетки, расслабляющая музыка на фоне и качественное предоставление услуг ждут вас в студии</p>
+          </div>
+        </div>
+
+        <div class="feature-block">
+          <div class="feature-icon"></div>
+          <div class="feature-content">
+            <h4 class="feature-title">Удобное расположение</h4>
+            <p class="feature-desc">Студия находится в спальном районе города, рядом большая парковка и станция метро Беговая</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма записи -->
+  <section class="booking">
+    <div class="booking-card">
+      <!-- Левая часть -->
+      <div class="booking-left is-form" id="bookingLeft">
+        <!-- Состояние: форма -->
+        <div class="state state-form">
+          <h2>ЗАПИШИТЕСЬ<br>НА КОНСУЛЬТАЦИЮ</h2>
+          <p class="booking-sub">
+            И наш администратор вам напишет<br>
+            и предложит свободные места
+          </p>
+
+          <form class="booking-form" id="bookingForm" action="submit.php" method="post" novalidate>
+            <label class="sr-only" for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Имя" required>
+
+            <label class="sr-only" for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="Телефон" required>
+
+            <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+          </form>
+        </div>
+
+        <!-- Состояние: успех -->
+        <div class="state state-success">
+          <h2>ВАША ЗАЯВКА<br>УСПЕШНО ПРИНЯТА!</h2>
+          <p class="booking-sub">
+            Дождитесь когда администратор вам<br>
+            напишет и предложит свободные места
+          </p>
+
+          <div class="success-actions">
+            <button id="sendAgainBtn" type="button">ОСТАВИТЬ ЗАЯВКУ ПОВТОРНО</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть -->
+      <div class="booking-right">
+        <img src="img/salon.jpg" alt="Интерьер салона">
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <div class="footer-icons">
+      <a href="#"><img src="img/tg.svg" alt="Telegram"></a>
+      <a href="#"><img src="img/inst.svg" alt="Instagram"></a>
+      <a href="#"><img src="img/wa.svg" alt="WhatsApp"></a>
+    </div>
+    <p class="footer-copy">
+      © 2025 Студия маникюра, педикюра и лазерной эпиляции Beauty club. Все права защищены.
+    </p>
+  </footer>
+
+  <!-- JS для переключения состояний -->
+  <script src="js/booking.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/form-validation.js"></script>
+</body>
+</html>

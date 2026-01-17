@@ -1,0 +1,1159 @@
+/* Специалисты */
+.specialists { padding: 0 20px; margin-top: 100px; }
+
+.specialists .team-title {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.specialists .team-show-all {
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  transition: color 0.2s ease;
+  margin-top: 40px;
+}
+
+.specialists .team-show-all:hover {
+  color: #47653F;
+  text-decoration: underline;
+}
+
+/* Контейнер для текста "Подробнее о нас" в 4-й ячейке */
+.team-show-all-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.team-show-all-text {
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.team-show-all-text:hover {
+  color: #47653F;
+  text-decoration: underline;
+}
+
+
+.specialists-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+/* Для главной страницы показываем 4 элемента в ряд (3 фото + 1 текст) */
+.index .specialists-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.spec-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1px;
+}
+
+.spec-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.spec-name {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 16px;
+  margin: 20px 0 8px;
+}
+
+.spec-role,
+.spec-exp {
+  margin: 0 0 8px 0;
+  color: #444;
+  font-size: 16px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .specialists-grid { grid-template-columns: repeat(2, 1fr); }
+  .index .specialists-grid { grid-template-columns: 1fr; }
+  
+  .specialists .team-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .specialists .team-show-all {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  
+  .team-show-all-placeholder {
+    justify-content: flex-start;
+  }
+  
+  .reviews .reviews-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .reviews-show-all {
+    margin-top: 30px;
+  }
+  
+  .reviews-show-all-link {
+    font-size: 14px;
+  }
+  
+  .gallery-preview .gallery-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-show-all {
+    margin-top: 30px;
+  }
+  
+  .gallery-show-all-link {
+    font-size: 14px;
+  }
+  
+  .services-preview .services-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .services-show-all {
+    margin-top: 30px;
+  }
+  
+  .services-show-all-link {
+    font-size: 14px;
+  }
+  
+  .hero-title {
+    font-size: clamp(18px, 6vw, 22px);
+    margin-bottom: 15px;
+    line-height: 1.1;
+    word-break: break-word;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .hero-image img {
+    height: 300px;
+  }
+  
+  .spec-name { 
+    font-size: 16px; 
+    margin: 20px 0 8px;
+  }
+  .spec-role, .spec-exp { 
+    font-size: 16px; 
+    margin: 0 0 6px 0;
+  }
+}
+/* Шрифты */
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url('../шрифты/HelveticaNeueCyr-Light.woff2') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Подключение шрифтов */
+
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url('../шрифты/HelveticaNeueCyr-Bold.woff2') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* Хедер */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100px;
+  background-color: #fff;
+  position: relative; /* нужно для выпадающего меню */
+}
+
+/* Логотип */
+.logo {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 48px;
+  color: #000;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Горизонтальное меню на десктопе */
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+/* Ссылки в меню */
+nav a {
+  color: #000;              /* чёрные ссылки */
+  text-decoration: none;    /* без подчёркивания */
+  font-weight: 400;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+nav a:hover {
+  text-decoration: underline; /* подчёркивание только при наведении */
+}
+
+/* Кнопка-бургер (скрыта на десктопе) */
+.burger {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+/* Мобильная версия */
+@media (max-width: 900px) {
+  .burger { display: block; }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 14px 20px;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 10;
+  }
+
+  header.nav-open nav { display: flex; }
+
+  nav a {
+    font-size: 18px;
+    padding: 6px 0;
+  }
+}
+
+
+
+/* Главный баннер */
+.hero-banner {
+  padding: 0 20px;
+  margin-top: 40px;
+}
+
+.hero-content {
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  font-size: 96px;
+  font-weight: normal;
+  color: #000;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.hero-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Информация о студии */
+.studio-intro {
+  padding: 0 20px;
+  margin-top: 100px;
+}
+
+.studio-intro-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.studio-intro-left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.studio-intro-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.studio-intro-right {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.studio-location p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.studio-location strong {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-weight: bold;
+  color: #000;
+}
+
+.studio-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  color: #333;
+}
+
+.studio-contacts {
+  margin-bottom: 30px;
+}
+
+.studio-contacts h3 {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.studio-contacts p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.studio-more-btn {
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.studio-more-btn:hover {
+  color: #47653F;
+  text-decoration: underline;
+}
+
+/* Мобильная версия блока студии */
+@media (max-width: 900px) {
+  .studio-intro-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .studio-intro-left {
+    max-width: 100%;
+  }
+  
+  .studio-intro-right {
+    padding: 0;
+  }
+  
+  .studio-location p,
+  .studio-description p,
+  .studio-contacts p {
+    font-size: 14px;
+  }
+  
+  .studio-contacts h3 {
+    font-size: 16px;
+  }
+  
+  .studio-more-btn {
+    font-size: 14px;
+  }
+}
+
+
+/* Хлебные крошки */
+.breadcrumbs {
+  padding: 0 20px;
+  margin-top: 100px; /* расстояние от хедера */
+  font-size: 16px;
+}
+
+.breadcrumbs a {
+  color: #888; /* серый текст */
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  color: #000; /* активная страница чёрная */
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+/* Утилита для скрытых подписей */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+/* Раздел формы */
+.booking {
+  padding: 0 20px;
+  margin-top: 100px; /* расстояние от хлебных крошек */
+}
+
+
+.booking-card {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ЛЕВАЯ ПАНЕЛЬ размером 690×440 */
+.booking-left {
+  width: 690px;
+  height: 440px;
+  background: #47653F;
+  color: #fff;
+  border-radius: 20px;
+  padding: 36px 28px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+/* Состояния внутри левой панели */
+.booking-left .state {
+  display: none;                    /* по умолчанию скрыты */
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;   /* кнопка/форма прижата вниз */
+}
+
+/* Показ конкретного состояния по классу панели */
+.booking-left.is-form   .state-form   { display: flex; }
+.booking-left.is-success .state-success{ display: flex; }
+
+/* Отступы между заголовком, подписью и формой по 30px */
+.booking-left h2 {
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  font-size: 42px;
+  line-height: 1.2;
+  margin: 0; /* убираем лишние отступы */
+}
+
+.booking-sub {
+  color: rgba(255,255,255,.8);
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 30px 0 30px; /* сверху 30px к заголовку, снизу 30px к форме */
+}
+
+
+/* Сетка формы */
+.booking-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+  margin: 0;                        /* чтобы не «выпирала» наружу */
+}
+.booking-form input {
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  font-size: 16px;
+  padding: 14px 18px;
+  background: #D7D6D6;
+  border: none;
+  border-radius: 24px;
+  outline: none;
+}
+
+.booking-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.booking-form button {
+  grid-column: 1 / -1;
+  height: 56px;
+  border: none;
+  border-radius: 24px;
+  background: #9C9A9A;
+  color: #fff;
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+.booking-form button:hover { filter: brightness(0.95); }
+.booking-form button:active { transform: translateY(1px); }
+
+/* Кнопка в состоянии успеха — как в форме */
+.success-actions button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 24px;
+  background: #9C9A9A;
+  color: #fff;
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+.success-actions button:hover { filter: brightness(0.95); }
+.success-actions button:active { transform: translateY(1px); }
+
+
+/* Правая картинка */
+.booking-right {
+  width: 690px;
+  height: 440px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.booking-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Адаптив */
+@media (max-width: 1400px) {
+  .booking-card {
+    flex-direction: column;
+  }
+
+  .booking-left,
+  .booking-right {
+    width: 100%;
+    max-width: 690px;
+    height: auto;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  /* Заголовок формы чуть меньше на адаптиве */
+  .booking-left h2 {
+    font-size: 36px;
+  }
+}
+
+/* Ещё немного уменьшим на небольших экранах */
+@media (max-width: 900px) {
+  .booking-left h2 {
+    font-size: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Блок услуг */
+.services {
+  padding: 0 20px;
+  margin-top: 100px; /* отступ от хлебных крошек */
+  margin-bottom: 100px; /* до футера как на макете */
+}
+
+/* Отзывы */
+.reviews {
+  padding: 0 20px;
+  margin-top: 100px;
+}
+
+.reviews .reviews-title {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+  color: #000;
+  text-align: left;
+}
+
+.reviews-show-all {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+.reviews-show-all-link {
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.reviews-show-all-link:hover {
+  color: #47653F;
+  text-decoration: underline;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  background: #E9E9E9;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.review-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-text {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.services-section + .services-section {
+  margin-top: 80px; /* расстояние между категориями */
+}
+
+.services-section h2 {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 36px;
+  margin: 0 0 24px;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr; /* резиновая сетка */
+  gap: 131px;              /* расстояние между колонками и вертикальной чертой */
+  justify-content: center; /* центрируем */
+  align-items: start;
+}
+
+.v-sep {
+  width: 1px;
+  background: #1e1e1e;
+  opacity: 0.8;
+}
+
+/* Колонки с ценами */
+.price-col {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;          /* тянется */
+  max-width: 569px;     /* но не шире 569px */
+}
+
+/* Список для рекомендаций: маркеры-точки и без разделителей */
+.rec-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.rec-list li {
+  padding: 14px 0;
+  border: none;
+}
+
+.price {
+  text-align: right;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.price-col li {
+  display: flex;
+  justify-content: space-between; /* название слева, цена справа */
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.price-col li span {
+  flex: 1 1 auto; /* название тянется */
+}
+
+/* Адаптив: на мобильных одна колонка, без разделителя */
+@media (max-width: 900px) {
+  .price-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .price-col {
+    max-width: 100%; /* на мобилке колонки на всю ширину */
+  }
+
+  .v-sep { display: none; }
+}
+
+
+
+
+
+
+
+
+
+
+/* Футер */
+footer {
+  margin-top: 150px; /* расстояние между формой и футером */
+  padding: 40px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 70px; /* расстояние между иконками и надписью */
+}
+
+
+.footer-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-copy {
+  font-size: 14px;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  color: #888;
+  margin: 0;
+}
+
+/* About page styles */
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;   /* боковые отступы как у остальных блоков */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.studio-info {
+  margin-bottom: 40px;
+}
+
+.studio-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.studio-info strong {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.founder-profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.founder-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.founder-info {
+  flex: 1;
+}
+
+.founder-name {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.founder-role,
+.founder-exp {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 5px 0;
+  line-height: 1.4;
+}
+
+.why-us {
+  margin-top: 60px;    /* 60px перед секцией "Почему мы" */
+  margin-bottom: 60px; /* 60px после секции до следующего блока */
+}
+
+/* На страницах, где за "Почему мы" сразу идёт форма записи — делаем 60px вместо глобальных 100px */
+.why-us + .booking {
+  margin-top: 60px;
+}
+
+.why-us-title {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-block {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 0;                 /* без внутренних отступов, как у обычного текста */
+  border: 0;                  /* без рамок */
+  background: transparent;    /* без фона */
+  margin: 0;
+  width: 100%;                /* занимает ширину контейнера с его боковыми отступами */
+}
+
+/* отключаем псевдо-элемент с рамкой */
+.feature-block::before { content: none; }
+
+/* контент как обычно */
+.feature-block > * { position: static; z-index: auto; }
+
+.feature-icon {
+  display: none; /* убираем зелёные точки */
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-title {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+.feature-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Mobile styles for about page */
+@media (max-width: 900px) {
+  .about-content {
+    padding: 30px 20px;  /* те же 20px по бокам на мобильных */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .founder-profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .founder-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .founder-name {
+    font-size: 18px;
+  }
+  
+  .why-us-title {
+    font-size: 24px;
+  }
+  
+  .feature-block {
+    padding: 0;               /* на мобильных тоже без внутренних отступов */
+    width: 100%;
+  }
+  
+  .feature-title {
+    font-size: 15px;
+  }
+  
+  .feature-desc {
+    font-size: 13px;
+  }
+}
+
+/* Галерея работ */
+.gallery { padding: 0 20px; margin-top: 60px; }
+
+/* Услуги на главной странице */
+.services-preview { 
+  padding: 0 20px; 
+  margin-top: 100px; 
+}
+
+.services-preview .services-title {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+  color: #000;
+  text-align: left;
+}
+
+.services-show-all {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+.services-show-all-link {
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.services-show-all-link:hover {
+  color: #47653F;
+  text-decoration: underline;
+}
+
+/* Галерея работ на главной странице */
+.gallery-preview { 
+  padding: 0 20px; 
+  margin-top: 100px; 
+}
+
+.gallery-preview .gallery-title {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 40px 0;
+  color: #000;
+  text-align: left;
+}
+
+.gallery-show-all {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+.gallery-show-all-link {
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: 'HelveticaNeueLight', Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.gallery-show-all-link:hover {
+  color: #47653F;
+  text-decoration: underline;
+}
+.gallery-title {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 36px;
+  margin: 0 0 24px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.gallery-card { margin: 0; }
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* Отступ перед вторым заголовком галереи */
+.gallery-grid + .gallery-title {
+  margin-top: 40px;
+}
+
+@media (max-width: 1200px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* Акции */
+.shares { padding: 0 20px; margin-top: 60px; }
+.share-block { margin-bottom: 80px; }
+.share-title {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 28px;
+  margin: 0 0 24px;
+}
+.share-text { max-width: 50%; }
+.share-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+.share-discount {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .share-title { font-size: 28px; }
+  .share-text { max-width: 100%; }
+  .share-text p { font-size: 16px; }
+  .share-discount { font-size: 20px; }
+}
+
+/* FAQ */
+.faq { padding: 0 20px; margin-top: 60px; }
+.faq-item { margin-bottom: 40px; }
+.faq-question {
+  font-family: 'HelveticaNeueBold', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 12px;
+  color: #000;
+}
+.faq-answer {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .faq-question { font-size: 16px; }
+  .faq-answer { font-size: 14px; }
+}
+
+/* Mobile override for hero title to avoid word breaks and fit within paddings */
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 60px;
+    line-height: 1.1;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+}

@@ -1,0 +1,25 @@
+# Секретные файлы с паролями и конфигурацией
+db.php
+
+# Системные файлы
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE файлы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Временные файлы
+*.log
+*.tmp
+
+# Большие медиа файлы
+pic/video.gif

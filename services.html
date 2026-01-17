@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги — Beauty Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+  <!-- Хэдер -->
+<header>
+  <a class="logo" href="index.html">BC</a>
+
+  <!-- Кнопка-бургер для мобильных -->
+  <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="siteNav">
+    <img src="img/burger.svg" alt="" width="28" height="28">
+  </button>
+
+  <nav id="siteNav">
+    <a href="about.html">О НАС</a>
+    <a href="services.html">УСЛУГИ</a>
+    <a href="recording.html">ЗАПИСЬ</a>
+    <a href="shares.html">АКЦИИ</a>
+    <a href="recommendations.html">РЕКОМЕНДАЦИИ</a>
+    <a href="questions.html">ВОПРОСЫ</a>
+  </nav>
+</header>
+
+  <!-- Хлебные крошки -->
+  <div class="breadcrumbs">
+    <a href="index.html">Главная</a> / <span>Услуги</span>
+  </div>
+
+
+  <main class="services">
+  <!-- Ногтевой сервис -->
+  <section class="services-section">
+    <h2>Ногтевой сервис</h2>
+
+    <div class="price-grid">
+      <ul class="price-col">
+        <li><span>Маникюр без покрытия</span><span class="price">1400 ₽</span></li>
+        <li><span>Маникюр + гель лак</span><span class="price">2400 ₽</span></li>
+        <li><span>Маникюр + лак</span><span class="price">1900 ₽</span></li>
+        <li><span>Японский маникюр</span><span class="price">2000 ₽</span></li>
+        <li><span>Детский маникюр</span><span class="price">800 ₽</span></li>
+        <li><span>Мужской маникюр</span><span class="price">1300 ₽</span></li>
+      </ul>
+
+      <div class="v-sep" aria-hidden="true"></div>
+
+      <ul class="price-col">
+        <li><span>Опил формы</span><span class="price">450 ₽</span></li>
+        <li><span>Педикюр без покрытия</span><span class="price">2400 ₽</span></li>
+        <li><span>Педикюр с покрытием</span><span class="price">3000 ₽</span></li>
+        <li><span>Мужской педикюр</span><span class="price">2600 ₽</span></li>
+        <li><span>Обработка трещин</span><span class="price">500 ₽</span></li>
+        <li><span>Обработка мозолей</span><span class="price">600 ₽</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Лазерная эпиляция -->
+  <section class="services-section">
+    <h2>Лазерная эпиляция</h2>
+
+    <div class="price-grid">
+      <ul class="price-col">
+        <li><span>Лазер тотальное бикини</span><span class="price">2800 ₽</span></li>
+        <li><span>Лазер среднее бикини</span><span class="price">2000 ₽</span></li>
+        <li><span>Лазер классическое бикини</span><span class="price">1600 ₽</span></li>
+        <li><span>Лазер ноги полностью</span><span class="price">3500 ₽</span></li>
+        <li><span>Лазер голени</span><span class="price">2600 ₽</span></li>
+        <li><span>Лазер бедра</span><span class="price">2600 ₽</span></li>
+      </ul>
+
+      <div class="v-sep" aria-hidden="true"></div>
+
+      <ul class="price-col">
+        <li><span>Лазер руки полностью</span><span class="price">1900 ₽</span></li>
+        <li><span>Лазер подмышки</span><span class="price">1400 ₽</span></li>
+        <li><span>Лазер живот полностью</span><span class="price">1900 ₽</span></li>
+        <li><span>Лазер живот дорожка</span><span class="price">900 ₽</span></li>
+        <li><span>Лазер ягодицы</span><span class="price">1900 ₽</span></li>
+        <li><span>Лазер поясница</span><span class="price">1600 ₽</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+
+
+  <!-- Форма записи -->
+  <section class="booking">
+    <div class="booking-card">
+      <!-- Левая часть -->
+      <div class="booking-left is-form" id="bookingLeft">
+        <!-- Состояние: форма -->
+        <div class="state state-form">
+          <h2>ЗАПИШИТЕСЬ<br>НА КОНСУЛЬТАЦИЮ</h2>
+          <p class="booking-sub">
+            И наш администратор вам напишет<br>
+            и предложит свободные места
+          </p>
+
+          <form class="booking-form" id="bookingForm" action="submit.php" method="post" novalidate>
+            <label class="sr-only" for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Имя" required>
+
+            <label class="sr-only" for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="Телефон" required>
+
+            <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+          </form>
+        </div>
+
+        <!-- Состояние: успех -->
+        <div class="state state-success">
+          <h2>ВАША ЗАЯВКА<br>УСПЕШНО ПРИНЯТА!</h2>
+          <p class="booking-sub">
+            Дождитесь когда администратор вам<br>
+            напишет и предложит свободные места
+          </p>
+
+          <div class="success-actions">
+            <button id="sendAgainBtn" type="button">ОСТАВИТЬ ЗАЯВКУ ПОВТОРНО</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть -->
+      <div class="booking-right">
+        <img src="img/salon.jpg" alt="Интерьер салона">
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <div class="footer-icons">
+      <a href="#"><img src="img/tg.svg" alt="Telegram"></a>
+      <a href="#"><img src="img/inst.svg" alt="Instagram"></a>
+      <a href="#"><img src="img/wa.svg" alt="WhatsApp"></a>
+    </div>
+    <p class="footer-copy">
+      © 2025 Студия маникюра, педикюра и лазерной эпиляции Beauty club. Все права защищены.
+    </p>
+  </footer>
+
+  <!-- JS для переключения состояний -->
+  <script src="js/booking.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/form-validation.js"></script>
+</body>
+</html>

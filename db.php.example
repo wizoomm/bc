@@ -1,0 +1,16 @@
+<?php
+session_start();
+
+// Подключение к PostgreSQL
+$host = "your_host";
+$dbname = "your_database";
+$user = "your_username";
+$pass = "your_password";
+
+try {
+    $pdo = new PDO("pgsql:host=$host;port=5432;dbname=$dbname", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Ошибка подключения: " . $e->getMessage());
+}
+?>

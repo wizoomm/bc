@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — Beauty Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body class="index">
+
+  <!-- Хэдер -->
+<header>
+  <a class="logo" href="index.html">BC</a>
+
+  <!-- Кнопка-бургер для мобильных -->
+  <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="siteNav">
+    <img src="img/burger.svg" alt="" width="28" height="28">
+  </button>
+
+  <nav id="siteNav">
+    <a href="about.html">О НАС</a>
+    <a href="services.html">УСЛУГИ</a>
+    <a href="recording.html">ЗАПИСЬ</a>
+    <a href="shares.html">АКЦИИ</a>
+    <a href="recommendations.html">РЕКОМЕНДАЦИИ</a>
+    <a href="questions.html">ВОПРОСЫ</a>
+  </nav>
+  </header>
+
+  <!-- Главный баннер -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1 class="hero-title">BEAUTY CLUB</h1>
+      <p class="hero-subtitle">Студия маникюра, педикюра и лазерной эпиляции</p>
+    </div>
+    <div class="hero-image">
+      <img src="img/women.jpg" alt="Beauty Club - Студия красоты">
+    </div>
+  </section>
+
+  <!-- Информация о студии -->
+  <section class="studio-intro">
+    <div class="studio-intro-content">
+      <div class="studio-intro-left">
+        <img src="img/salon.jpg" alt="Интерьер студии красоты">
+      </div>
+      <div class="studio-intro-right">
+        <div class="studio-location">
+          <p>Наша студия находится в Приморском районе по адресу:<br><strong>Приморский проспект д137 к1</strong></p>
+        </div>
+        <div class="studio-description">
+          <p>В студии красоты "Клуб красоты" царит атмосфера волшебства, где каждая процедура — это не просто уход, а настоящее искусство. Здесь, под чутким руководством талантливой мастерицы Анастасии, ваши желания обретают форму, а каждый штрих превращается в шедевр, отражая вашу уникальность и внутреннюю гармонию.</p>
+        </div>
+        <div class="studio-contacts">
+          <h3>Контакты</h3>
+          <p>Приморский проспект д.137 к.1, г. Санкт-Петербург, Россия</p>
+          <p>+7 (921) 445-90-69</p>
+        </div>
+        <a href="about.html" class="studio-more-btn">Подробнее о нас</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Наша команда -->
+  <section class="specialists">
+    <h2 class="team-title">НАША КОМАНДА</h2>
+    <div class="specialists-grid">
+      <article class="spec-card">
+        <img class="spec-photo" src="img/specialist1.png" alt="Иванова Кристина">
+        <h3 class="spec-name">ИВАНОВА КРИСТИНА</h3>
+        <p class="spec-role">Мастер маникюра, педикюра</p>
+        <p class="spec-exp">Стаж в студии 2 года</p>
+      </article>
+      <article class="spec-card">
+        <img class="spec-photo" src="img/specialist2.png" alt="Куртеева Анастасия">
+        <h3 class="spec-name">КУРТЕЕВА АНАСТАСИЯ</h3>
+        <p class="spec-role">Мастер маникюра, педикюра</p>
+        <p class="spec-exp">Стаж в студии 4 года</p>
+      </article>
+      <article class="spec-card">
+        <img class="spec-photo" src="img/specialist3.png" alt="Смельник Карина">
+        <h3 class="spec-name">СМЕЛЬНИК КАРИНА</h3>
+        <p class="spec-role">Мастер лазерной эпиляции</p>
+        <p class="spec-exp">Стаж в студии 4 года</p>
+      </article>
+      <div class="team-show-all-placeholder">
+        <a href="specialists.html" class="team-show-all-text">Подробнее о нас</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section class="services-preview">
+    <h2 class="services-title">УСЛУГИ</h2>
+    
+    <!-- Ногтевой сервис -->
+    <div class="services-section">
+
+      <div class="price-grid">
+        <ul class="price-col">
+          <li><span>Маникюр без покрытия</span><span class="price">1400 ₽</span></li>
+          <li><span>Маникюр + гель лак</span><span class="price">2400 ₽</span></li>
+          <li><span>Маникюр + лак</span><span class="price">1900 ₽</span></li>
+          <li><span>Японский маникюр</span><span class="price">2000 ₽</span></li>
+        </ul>
+        <div class="v-sep" aria-hidden="true"></div>
+        <ul class="price-col">
+          <li><span>Педикюр без покрытия</span><span class="price">2400 ₽</span></li>
+          <li><span>Педикюр с покрытием</span><span class="price">3000 ₽</span></li>
+          <li><span>Мужской педикюр</span><span class="price">2600 ₽</span></li>
+          <li><span>Обработка трещин</span><span class="price">500 ₽</span></li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="services-show-all">
+      <a href="services.html" class="services-show-all-link">Полный список услуг</a>
+    </div>
+  </section>
+
+  <!-- Галерея работ -->
+  <section class="gallery-preview">
+    <h2 class="gallery-title">НАШИ РАБОТЫ</h2>
+    <div class="gallery-grid">
+      <figure class="gallery-card"><img src="img/1.jpg" alt="Работа 1"></figure>
+      <figure class="gallery-card"><img src="img/2.jpg" alt="Работа 2"></figure>
+      <figure class="gallery-card"><img src="img/3.jpg" alt="Работа 3"></figure>
+      <figure class="gallery-card"><img src="img/4.jpg" alt="Работа 4"></figure>
+
+    </div>
+    <div class="gallery-show-all">
+      <a href="gallery.html" class="gallery-show-all-link">Больше наших работ</a>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section class="reviews">
+    <h2 class="reviews-title">ОТЗЫВЫ</h2>
+    <div class="reviews-grid">
+      <article class="review-card">
+        <img class="review-avatar" src="img/person1.jpg" alt="Фото клиента">
+        <p class="review-text">«Хожу сюда уже не первый раз, всегда остаюсь довольна. Мастера очень внимательные, аккуратно делают маникюр, результат держится долго. Настоящее удовольствие приходить сюда!»</p>
+      </article>
+
+      <article class="review-card">
+        <img class="review-avatar" src="img/person2.jpg" alt="Фото клиента">
+        <p class="review-text">«Прекрасное место! Здесь мне сделали идеальный маникюр, также попробовала лазерную эпиляцию — всё прошло комфортно, безболезненно. Атмосфера доверия заботы чувствуется с первой минуты»</p>
+      </article>
+    </div>
+    <div class="reviews-show-all">
+      <a href="reviews.html" class="reviews-show-all-link">Показать все</a>
+    </div>
+  </section>
+
+  <!-- Форма записи -->
+  <section class="booking">
+    <div class="booking-card">
+      <!-- Левая часть -->
+      <div class="booking-left is-form" id="bookingLeft">
+        <!-- Состояние: форма -->
+        <div class="state state-form">
+          <h2>ЗАПИШИТЕСЬ<br>НА КОНСУЛЬТАЦИЮ</h2>
+          <p class="booking-sub">
+            И наш администратор вам напишет<br>
+            и предложит свободные места
+          </p>
+
+          <form class="booking-form" id="bookingForm" action="submit.php" method="post" novalidate>
+            <label class="sr-only" for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Имя" required>
+
+            <label class="sr-only" for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="Телефон" required>
+
+            <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+          </form>
+        </div>
+
+        <!-- Состояние: успех -->
+        <div class="state state-success">
+          <h2>ВАША ЗАЯВКА<br>УСПЕШНО ПРИНЯТА!</h2>
+          <p class="booking-sub">
+            Дождитесь когда администратор вам<br>
+            напишет и предложит свободные места
+          </p>
+
+          <div class="success-actions">
+            <button id="sendAgainBtn" type="button">ОСТАВИТЬ ЗАЯВКУ ПОВТОРНО</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть -->
+      <div class="booking-right">
+        <img src="img/salon.jpg" alt="Интерьер салона">
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <div class="footer-icons">
+      <a href="#"><img src="img/tg.svg" alt="Telegram"></a>
+      <a href="#"><img src="img/inst.svg" alt="Instagram"></a>
+      <a href="#"><img src="img/wa.svg" alt="WhatsApp"></a>
+    </div>
+    <p class="footer-copy">
+      © 2025 Студия маникюра, педикюра и лазерной эпиляции Beauty club. Все права защищены.
+    </p>
+  </footer>
+
+  <!-- JS для переключения состояний -->
+  <script src="js/booking.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/form-validation.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы — Beauty Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+  <!-- Хэдер -->
+<header>
+  <a class="logo" href="index.html">BC</a>
+
+  <!-- Кнопка-бургер для мобильных -->
+  <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="siteNav">
+    <img src="img/burger.svg" alt="" width="28" height="28">
+  </button>
+
+  <nav id="siteNav">
+    <a href="about.html">О НАС</a>
+    <a href="services.html">УСЛУГИ</a>
+    <a href="recording.html">ЗАПИСЬ</a>
+    <a href="shares.html">АКЦИИ</a>
+    <a href="recommendations.html">РЕКОМЕНДАЦИИ</a>
+    <a href="questions.html">ВОПРОСЫ</a>
+  </nav>
+</header>
+
+  <!-- Хлебные крошки -->
+  <div class="breadcrumbs">
+    <a href="index.html">Главная</a> / <span>Отзывы</span>
+  </div>
+
+
+  <section class="reviews">
+    <div class="reviews-grid">
+      <article class="review-card">
+        <img class="review-avatar" src="img/person1.jpg" alt="Фото клиента">
+        <p class="review-text">«Хожу сюда уже не первый раз, всегда остаюсь довольна. Мастера очень внимательные, аккуратно делают маникюр, результат держится долго. Настоящее удовольствие приходить сюда!»</p>
+      </article>
+
+      <article class="review-card">
+        <img class="review-avatar" src="img/person2.jpg" alt="Фото клиента">
+        <p class="review-text">«Прекрасное место! Здесь мне сделали идеальный маникюр, также попробовала лазерную эпиляцию — всё прошло комфортно,безболезненно. Атмосфера доверия заботы чувствуется с первой минуты»</p>
+      </article>
+
+      <article class="review-card">
+        <img class="review-avatar" src="img/person3.jpg" alt="Фото клиента">
+        <p class="review-text">«Очень понравился сервис в этом салоне! Атмосфера спокойная, уютная, всё сделали быстро, качественно. Вернусь снова, порекомендую данное заведение своей жене»</p>
+      </article>
+
+      <article class="review-card">
+        <img class="review-avatar" src="img/person4.jpg" alt="Фото клиента">
+        <p class="review-text">«Я редко доверяю новые процедуры, но в этом салоне чувствовала себя спокойно, уверенно. Всё объяснили подробно, работа мастеров высшего уровня. Теперь я точно постоянный клиент!»</p>
+      </article>
+    </div>
+  </section>
+
+
+
+  <!-- Форма записи -->
+  <section class="booking">
+    <div class="booking-card">
+      <!-- Левая часть -->
+      <div class="booking-left is-form" id="bookingLeft">
+        <!-- Состояние: форма -->
+        <div class="state state-form">
+          <h2>ЗАПИШИТЕСЬ<br>НА КОНСУЛЬТАЦИЮ</h2>
+          <p class="booking-sub">
+            И наш администратор вам напишет<br>
+            и предложит свободные места
+          </p>
+
+          <form class="booking-form" id="bookingForm" action="submit.php" method="post" novalidate>
+            <label class="sr-only" for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Имя" required>
+
+            <label class="sr-only" for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="Телефон" required>
+
+            <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+          </form>
+        </div>
+
+        <!-- Состояние: успех -->
+        <div class="state state-success">
+          <h2>ВАША ЗАЯВКА<br>УСПЕШНО ПРИНЯТА!</h2>
+          <p class="booking-sub">
+            Дождитесь когда администратор вам<br>
+            напишет и предложит свободные места
+          </p>
+
+          <div class="success-actions">
+            <button id="sendAgainBtn" type="button">ОСТАВИТЬ ЗАЯВКУ ПОВТОРНО</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть -->
+      <div class="booking-right">
+        <img src="img/salon.jpg" alt="Интерьер салона">
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <div class="footer-icons">
+      <a href="#"><img src="img/tg.svg" alt="Telegram"></a>
+      <a href="#"><img src="img/inst.svg" alt="Instagram"></a>
+      <a href="#"><img src="img/wa.svg" alt="WhatsApp"></a>
+    </div>
+    <p class="footer-copy">
+      © 2025 Студия маникюра, педикюра и лазерной эпиляции Beauty club. Все права защищены.
+    </p>
+  </footer>
+
+  <!-- JS для переключения состояний -->
+  <script src="js/booking.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/form-validation.js"></script>
+</body>
+</html>
