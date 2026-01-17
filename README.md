@@ -1,5 +1,7 @@
 # Beauty Club — Сайт студии красоты
 
+![Видео демонстрации сайта](pic/video.gif)
+
 ## Демо
 
 **Сайт:** [https://se.ifmo.ru/~s368382/bc/index.html](https://se.ifmo.ru/~s368382/bc/index.html)  
