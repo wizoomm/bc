@@ -1,8 +1,6 @@
 # Beauty Club — Сайт студии красоты
 
-https://github.com/wizoomm/bc/blob/main/pic/video.gif
-
-![Видео демонстрации сайта](https://github.com/wizoomm/bc/blob/main/pic/video.gif)
+<video src="https://github.com/wizoomm/bc/raw/main/pic/video.gif" controls width="100%"></video>
 
 ## Демо
 
