@@ -21,5 +21,5 @@ Thumbs.db
 *.log
 *.tmp
 
-# Большие медиа файлы
-pic/video.gif
+# Большие медиа файлы (теперь используем Git LFS)
+# pic/video.gif
